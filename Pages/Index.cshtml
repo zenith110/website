@@ -19,7 +19,7 @@
     // Lets us disable the project template and reenable when we need to
     var style = "display:none";
 
-    var pstyleColor = "White";
+    var pstyleColor = "#F3EFE0";
     if(Request.Method == "POST")
     {
        // Lets us parse the command box
@@ -29,18 +29,8 @@
        {
            // List of overall commands
            case "commands":
-           result = "The following commands are available: resume, project1, email, github, and clear.";
+           result = "The following commands are available: project1, and clear.";
            break;
-
-            // Launches resume
-            case "resume":
-            Response.Redirect("https://breeds.blob.core.windows.net/websitefiles/resume.pdf");
-            break;
-
-            // Redirects to email client
-            case "email":
-            Response.Redirect("mailto:contact@abrahannevarez.dev");
-            break;
 
             // Clears the prompt
             case "clear":
@@ -49,7 +39,7 @@
 
             case "project1":
             style = "flex";
-            pstyleColor = "White";
+            pstyleColor = "#F3EFE0";
             projectName = "Gofetch";
             goal = "Goal: To create a platform that allows users to recieve Instagram pictures of pets through various mediums.";
             languages = "Languages used: Python, and Golang";
@@ -61,9 +51,6 @@
             githubText = "Github Repo";
             break;
             
-            case "github":
-            Response.Redirect("https://github.com/zenith110");
-            break;
 
             default:
                 result = "Sorry, but that command is not in the list of commands. Please try again.";
@@ -76,26 +63,27 @@
 
 <!----------Main portion of the site------------>
 <div class="text-center">
-    <h1 class="display-4" style="color:white">Welcome to Abrahan's Portfolio</h1>
-    <p style="color:white">To get started: type in "commands" to access our various commands available.</p>
+    <h1 class="display-4" style="color:@pstyleColor">Welcome to Abrahan's Portfolio</h1>
+    <p style="color:@pstyleColor">To get started: type in "commands" to access our various commands available.</p>
     <div class = "Command window">
     <label style="color:green">guest@abrahannevarez.dev:~#</label>
         <form action ="" method="POST">
         <!---Input the various commands--->
-            <input type="text" name="commandText"/>
-        </div>
+            <input type="text" name="commandText" class="input-box"/>
+        
         <!---Spits out some result text-->
         <p style="color:@pstyleColor">@result</p>
-        <!---------------Begins the project template------------------------->
+        <!---------------Begins the project template for each project passed through in post------------------------->
         <!--Change the variable of style to change the various different styles---->
             <div id="ProjectDisplay"  style="@style">
+            <left>
                 <h2 style="color:@pstyleColor">@projectName</h2>
-                <h4 style="color:@pstyleColor">@goal</h4>
+                <h5 style="color:@pstyleColor">@goal</h4>
                 <li style="color:@pstyleColor">@languages</li>
                 <li style="color:@pstyleColor">@frameworks</li>
                 <li style="color:@pstyleColor">@cloud</li>
 			    <button type="button" class="btn btn-secondary"><a href="@githubLink"  target = "_blank">@githubText</a></button>
-                <button type="button" class="btn btn-secondary"><a href="@demoLink" class="button2" target = "_blank">@demoText</a></button>
+                <button type="button" class="btn btn-secondary"><a href="@demoLink" class="button2" target = "_blank">@demoText</a></button></left>
             </div>
         </form>
 </div>

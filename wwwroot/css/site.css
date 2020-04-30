@@ -11,7 +11,7 @@ a.navbar-brand {
 a {
   color: #ffffff;
 }
-
+input.input-box, textarea { background: black; }
 .btn-primary {
   color: white;
   background-color: #ffffff;
