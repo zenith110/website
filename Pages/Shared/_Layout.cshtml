@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Portfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+.footer {
+  background-color: White;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+    <footer class="border-top footer white">
+        <div class="container">
+        <center><a href="https://www.linkedin.com/in/abrahan-nevarez/" target = "_blank"><img src="https://breeds.blob.core.windows.net/websitefiles/icons/LI-In-Bug.png" height=32 width=32></img></a>
+        <p style="color:white">Created with <a href="https://icons8.com/icon/64452/heart"><img src="https://img.icons8.com/cotton/64/000000/like--v1.png" height=32 width=32"></img></a> in ASP.NET by Abrahan Nevarez</p></center>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</html>
