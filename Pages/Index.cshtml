@@ -15,7 +15,9 @@
     var demoLink = "";
     var githubText = "";
     var demoText = "";
-    
+    var buttonstyle = "flex";
+    var githubalign = "left";
+    var demoalign = "left";
     // Lets us disable the project template and reenable when we need to
     var style = "display:none";
 
@@ -37,6 +39,7 @@
             result = "";
             break;
 
+            // Project 1 - Gofetch
             case "project1":
             style = "flex";
             pstyleColor = "#F3EFE0";
@@ -46,9 +49,10 @@
             frameworks = "Frameworks and libraries used: DiscordGo, Flask, Selenium, BeautifulSoup4, Click, and Requests.";
             cloud = "Cloud and database used: Microsoft's Azure, and PostgreSQL";
             githubLink = "https://github.com/zenith110/Gofetch";
-            demoLink = "http://gofetch.pictures:5000";
+            buttonstyle = "display:none";
             demoText = "Demo";
             githubText = "Github Repo";
+            githubalign = "center";
             break;
             
 
@@ -82,9 +86,10 @@
                 <li style="color:@pstyleColor;text-align:left">@languages</li>
                 <li style="color:@pstyleColor;text-align:left">@frameworks</li>
                 <li style="color:@pstyleColor;text-align:left">@cloud</li>
-                <p align="left">
-			    <button type="button" class="btn btn-secondary"><a href="@githubLink"  target = "_blank">@githubText</a></button>
-                <button type="button" class="btn btn-secondary"><a href="@demoLink" class="button2" target = "_blank">@demoText</a></button></p>
+                <p align="@githubalign">
+			    <button type="button" class="btn btn-secondary"><a href="@githubLink"  target = "_blank">@githubText</a></button></p>
+                <p align="@demoalign">
+                <button type="button" class="btn btn-secondary" style="@buttonstyle"><a href="@demoLink" class="button2" target = "_blank">@demoText</a></button>
             </div>
         </form>
 </div>

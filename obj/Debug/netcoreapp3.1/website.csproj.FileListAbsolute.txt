@@ -47,7 +47,6 @@ C:\Users\Abrahan\Downloads\Portfolio\bin\Debug\netcoreapp3.1\website.pdb
 C:\Users\Abrahan\Downloads\Portfolio\bin\Debug\netcoreapp3.1\website.Views.dll
 C:\Users\Abrahan\Downloads\Portfolio\bin\Debug\netcoreapp3.1\website.Views.pdb
 C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\website.csprojAssemblyReference.cache
-C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\website.csproj.CoreCompileInputs.cache
 C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\website.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\website.RazorAssemblyInfo.cache
 C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\website.RazorAssemblyInfo.cs
@@ -70,5 +69,4 @@ C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\staticwebassets\web
 C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\staticwebassets\website.StaticWebAssets.xml
 C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\website.dll
 C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\website.pdb
-C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\website.genruntimeconfig.cache
 C:\Users\Abrahan\Downloads\Portfolio\obj\Debug\netcoreapp3.1\website.csproj.CopyComplete
