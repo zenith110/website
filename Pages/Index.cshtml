@@ -24,8 +24,9 @@
     var pstyleColor = "#F3EFE0";
     if(Request.Method == "POST")
     {
-       // Lets us parse the command box
-       var command = Request.Form["commandText"];
+       // Lets us parse the command box and lowers the string
+       string command = Request.Form["commandText"];
+       command = command.ToLower();
        // Gives us our various commands that we can use on the site
        switch(command)
        {
