@@ -10,14 +10,14 @@ def index():
 @app.route("/commands/", methods = ["POST"])
 def command_route():
     input = request.form["command-text"]
-    
+    input = input.lower()
     if(input == "commands"):
         return render_template("index.html", pstyleColor = "#F3EFE0", style = "display:none", result = "The following commands are available: Gofetch, Pokemon, and clear.")
 
     elif(input == "clear"):
         return render_template("index.html", pstyleColor = "#F3EFE0", style = "display:none", result = "")
 
-    elif(input == "Gofetch"):
+    elif(input == "gofetch"):
         return render_template("index.html", 
         style = "flex", pstyleColor = "#F3EFE0",
         projectName = "Gofetch", 
@@ -30,7 +30,7 @@ def command_route():
         demoText = "Demo",
         githubText = "Github Repo",
         githubalign = "center")
-    elif(input == "Pokemon"):
+    elif(input == "pokemon"):
         return render_template("index.html", 
         style = "flex", pstyleColor = "#F3EFE0",
         projectName = "Pokemon Battle sim", 
