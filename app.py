@@ -31,4 +31,4 @@ def command_route():
         githubText = "Github Repo",
         githubalign = "center")
 if __name__ == '__main__':
-    app.run
+    app.run(host="0.0.0.0")
