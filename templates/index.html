@@ -1,0 +1,48 @@
+<html>
+    <head>
+    <title>Abrahan's Portfolio</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='site.css') }}">
+    </head>
+        <body style="background-color:black">
+        <center>
+        <!---Main portion of the site-->
+        <div class="text-center">
+            <h1 class="display-4" style="color: white">Welcome to Abrahan's Portfolio</h1>
+            <p style="color:{{pstyleColor}}">To get started: type in "commands" to access our various commands available.</p>
+            <div class = "Command window">
+            <label style="color:green">guest@abrahannevarez.dev:~#</label>
+                <form action ="/commands/" method="POST">
+                
+                <input type="text" name="command-text" class="input-box"/>
+                
+                <!---Spits out some result text-->
+                <p style="color:{{pstyleColor}}">{{result}}</p>
+                <!---------------Begins the project template for each project passed through in post------------------------->
+                <!--Change the variable of style to change the various different styles---->
+                    <div id="ProjectDisplay"  style="{{style}}">
+                    <center>
+                        <h2 style="color:{{pstyleColor}};text-align:center">{{projectName}}</h2>
+                        <h5 style="color:{{pstyleColor}};text-align:center">{{goal}}</h4>
+                        <li style="color:{{pstyleColor}};text-align:center">{{languages}}</li>
+                        <li style="color:{{pstyleColor}};text-align:center">{{frameworks}}</li>
+                        <li style="color:{{pstyleColor}};text-align:center">{{cloud}}</li>
+                        <p align="@githubalign">
+                        <button type="button" style="color:black"><a href="{{githubLink}}"  target = "_blank">{{githubText}}</a></button></p>
+                        <p align="{{demoalign}}">
+                        <button type="button" style="{{buttonstyle}};color:black"><a href="{{demoLink}}" class="button2" target = "_blank">{{demoText}}</a></button>
+                        </center>
+                    </div>
+                </form>
+                </div>
+            </center>
+    </body>
+<footer class="border-top footer white" style="background-color:white">
+        <div class="container">
+            <center><a href="https://www.linkedin.com/in/abrahan-nevarez/" target = "_blank"><img src="{{ url_for('static',filename='LI-In-Bug.png') }}" height=32 width=32></img></a>
+            <a href="https://github.com/zenith110" target = "_blank"><img src="{{ url_for('static',filename='GitHub-Mark-32px.png') }}" height=32 width=32></img></a>
+            <a href="https://breeds.blob.core.windows.net/websitefiles/resume.pdf" target = "_blank"><img src="https://img.icons8.com/carbon-copy/100/000000/resume.png" height=32 width=32></img></a>
+            <a href="mailto:contact@abrahannevarez.dev" target = "_blank"><img src="https://img.icons8.com/doodle/48/000000/email--v1.png" height=32 width=32></img></a>
+            <p style="color:black">Created with <a href="https://icons8.com/icon/64452/heart"><img src="https://img.icons8.com/cotton/64/000000/like--v1.png" height=32 width=32></img></a> in Flask and hosted on AWS</p></center>
+        </div>
+</footer>
+</html>
