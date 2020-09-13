@@ -29,7 +29,8 @@ def command_route():
         buttonstyle = "display:none;",
         demoText = "Demo",
         githubText = "Github Repo",
-        githubalign = "center")
+        githubalign = "center",
+        featuresbutton = "test")
     elif(input == "pokemon"):
         return render_template("index.html", 
         style = "flex", pstyleColor = "#F3EFE0",
@@ -43,6 +44,10 @@ def command_route():
         buttonstyle = "display:none;color: black",
         demoText = "Demo",
         githubText = "Github Repo",
-        githubalign = "center")
+        githubalign = "center",
+        img_1 = "https://zenith110.github.io/Portfolio/projects/pokemon_battle_sim/img_1.png",
+        img_2 = "https://zenith110.github.io/Portfolio/projects/pokemon_battle_sim/img_2.png",
+        img_3 = "https://zenith110.github.io/Portfolio/projects/pokemon_battle_sim/img_3.png",
+        img_4 = "https://zenith110.github.io/Portfolio/projects/pokemon_battle_sim/img_4.png")
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=80)
